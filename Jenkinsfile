@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages{
-        stage ("build")
+        stage("build")
         steps{
             echo "We buliding the image"
         }
@@ -12,9 +12,11 @@ pipeline {
         }
 
         stages("running the Application")
-        steps("Apply phase ")
+        steps{
+            echo "basically kubectl Apply phase "
+        }
 
-        echo "basically kubectl Apply phase "
+        
 
 
     }
