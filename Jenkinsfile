@@ -1,20 +1,26 @@
 pipeline {
     agent any
     stages{
-        stage("build")
+        stage("build"){
         steps{
             echo "We buliding the image"
         }
+        }
 
-        stage("Deploy to registry")
+
+        stage("Deploy to registry"){
         steps{
             echo "Pushing image to registry"
         }
+        }
 
-        stages("running the Application")
+
+        stage("running the Application"){
         steps{
             echo "basically kubectl Apply phase "
         }
+        }
+
 
         
 
